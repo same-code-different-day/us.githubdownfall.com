@@ -6,8 +6,8 @@
  */
 import { Database } from "bun:sqlite";
 
-const HISTORY_URL = "https://www.githubstatus.com/history";
-const INCIDENT_URL = "https://www.githubstatus.com/api/v2/incidents";
+const HISTORY_URL = "https://www.us.githubstatus.com/history";
+const INCIDENT_URL = "https://www.us.githubstatus.com/api/v2/incidents";
 const CUTOFF_YEAR = 2025;
 
 // Pages 1-5 cover Feb 2026 back to Dec 2024 (3 months per page).
