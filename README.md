@@ -1,6 +1,6 @@
-# Github Downfall
+# Enterprise Github Downfall
 
-Track Github's historical incidents and downtime. A contribution graph-style heatmap of every Github incident since January 2025, with trend analysis and live status.
+Track Enterprise Github's historical incidents and downtime. A contribution graph-style heatmap of every Enterprise Github incident since January 2025, with trend analysis and live status.
 
 Built with Astro, Tailwind, and Bun SQLite.
 
@@ -14,6 +14,6 @@ bun --bun dev      # start dev server at localhost:4321
 
 ## How it works
 
-On each page load, the latest 50 incidents are fetched from the [Github Status API](https://www.githubstatus.com/api) and upserted into a local SQLite database. The `scrape.ts` script backfills historical incidents by parsing the embedded data from `githubstatus.com/history` pages and fetching full details via the individual incident API.
+On each page load, the latest 50 incidents are fetched from the [Enterprise Github Status API](https://us.githubstatus.com/api) and upserted into a local SQLite database. The `scrape.ts` script backfills historical incidents by parsing the embedded data from `us.githubstatus.com/history` pages and fetching full details via the individual incident API.
 
 The frontend renders a year-long heatmap where redder days indicate higher cumulative incident severity. Clicking a day shows its incidents. A trends section shows frequency/severity changes, impact breakdown, worst days, and a monthly bar chart.
